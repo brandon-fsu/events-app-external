@@ -1,0 +1,16 @@
+<ul >
+  {{#events}}
+    <li style="color:darkblue">
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
+        <p style="color:green">At: {{ location }}</p>
+        <p style="color: orange">When: {{ time }} </p>
+        <p style="color: royalblue">Priority: {{ priority  }}</p>
+        <form action="/delete?id={{id}}" method="post">
+            <input style="background-color: red;" type="submit" name="delete" value="Delete">
+        </form>
+    </li>
+    <hr style="border-color:black"/>
+  {{/events}}
+
+</ul>
